@@ -4,6 +4,9 @@ FROM ubuntu:14.04
 #MAINTAINER - Identifies the maintainer of the dockerfile.
 MAINTAINER ian.miell@gmail.com
 
+# Pull submodules
+RUN git submodule sync --recursive && git submodule update --init --recursive
+
 #RUN - Runs a command in the container
 RUN echo "Hello world" > /tmp/hello_world.txt
 
