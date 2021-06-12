@@ -5,7 +5,7 @@ FROM ubuntu:14.04
 MAINTAINER ian.miell@gmail.com
 
 # Pull submodules
-RUN git submodule sync --recursive && git submodule update --init --recursive
+RUN git submodule update --init --recursive --depth=1
 
 #RUN - Runs a command in the container
 RUN echo "Hello world" > /tmp/hello_world.txt
