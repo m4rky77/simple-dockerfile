@@ -4,6 +4,7 @@ FROM ubuntu:14.04
 #MAINTAINER - Identifies the maintainer of the dockerfile.
 MAINTAINER ian.miell@gmail.com
 
+RUN apt-get install git -y
 # Pull submodules
 RUN git submodule update --init --recursive --depth=1
 
